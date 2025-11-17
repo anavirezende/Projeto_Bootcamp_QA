@@ -3,8 +3,7 @@
   <p>
     Projeto desenvolvido para o Bootcamp de Quality Assurance, focado em automação
     de testes utilizando <strong>Cypress</strong>.  
-    Aqui você encontra toda a estrutura, ferramentas, cenários testados e instruções
-    para rodar o projeto.
+    Aqui você encontra toda a estrutura, ferramentas e cenários testados 
   </p>
 </div>
 
