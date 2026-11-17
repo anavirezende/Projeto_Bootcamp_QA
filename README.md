@@ -1,105 +1,113 @@
 <div align="center">
-  <h1>🧪 Projeto Bootcamp QA – Automação de Testes com Cypress</h1>
-  <p>
-    Projeto desenvolvido para o Bootcamp de Quality Assurance, focado em automação
-    de testes utilizando <strong>Cypress</strong>.  
-    Aqui você encontra toda a estrutura, ferramentas e cenários testados 
-  </p>
+
+# 🧪 Automação E2E com Cypress
+
+**OrangeHRM**<br>
+Page Objects · Comandos customizados · Testes end-to-end
+
+![Cypress](https://img.shields.io/badge/Cypress-2b2b2b?style=for-the-badge&logo=cypress&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
+![Git](https://img.shields.io/badge/Git-FF6B5B?style=for-the-badge&logo=git&logoColor=white)
+![Status](https://img.shields.io/badge/status-em%20evolu%C3%A7%C3%A3o-FF6B5B?style=for-the-badge)
+
+<!-- Quando o Passo 2 (GitHub Actions) estiver pronto, descomente a linha abaixo:
+[![Testes](https://github.com/anavirezende/Projeto_Bootcamp_QA/actions/workflows/cypress.yml/badge.svg)](https://github.com/anavirezende/Projeto_Bootcamp_QA/actions)
+-->
+
+<img src="docs/execucao.gif" alt="Execução dos testes no Cypress" width="700">
+
+[Objetivo](#-objetivo) · [Cenários](#-cenários-cobertos) · [Arquitetura](#️-arquitetura) · [Como executar](#️-como-executar) · [Aprendizados](#-aprendizados)
+
 </div>
 
-<hr/>
+---
 
-<h2>🚀 Tecnologias Utilizadas</h2>
-<ul>
-  <li><strong>Node.js</strong></li>
-  <li><strong>Cypress</strong></li>
-  <li><strong>JavaScript</strong></li>
-  <li><strong>Visual Studio Code</strong></li>
-</ul>
+## 🎯 Objetivo
 
-<hr/>
+Projeto de automação de testes end-to-end desenvolvido durante o bootcamp de QA. Ele garante a qualidade dos fluxos principais do sistema por meio de testes automatizados, reduzindo o esforço de regressão manual.
 
-<h2>📂 Estrutura do Projeto</h2>
+## ✅ Cenários cobertos
 
-<pre>
-/cypress
-  /e2e
-    ├── cadastrar-cargo-testes/
-    ├── cadastrar-funcionarios-testes/
-  /fixtures
-  /pages
-    ├── cargo-page/
-    ├── funcionario-page/
-    ├── login-page/
-  /support
-    ├── commands.js
-    ├── e2e.js
-</pre>
+<details open>
+<summary><b>📋 Ver cenários por funcionalidade</b></summary>
 
-<p><strong>Padrões utilizados:</strong></p>
-<ul>
-  <li>✔️ Page Objects para organização</li>
-  <li>✔️ Commands customizados para reutilização de código</li>
-  <li>✔️ Testes E2E por funcionalidade</li>
-</ul>
+<br>
 
-<hr/>
+| Funcionalidade | Cenários automatizados |
+|---|---|
+| 🔐 **Login** | [ex.: login válido, senha inválida, campos vazios] |
+| 💼 **Cadastro de cargos** | [ex.: cadastro com sucesso, campo obrigatório, duplicidade] |
+| 👥 **Cadastro de funcionários** | [ex.: cadastro completo, validações de campos] |
 
-<h2>🧷 Cenários de Teste Implementados</h2>
+</details>
 
-<h3>📌 Cadastro de Cargo</h3>
-<ul>
-  <li>Cadastro com dados válidos</li>
-  <li>Validação de campos obrigatórios</li>
-  <li>Validação de cadastro duplicado</li>
-</ul>
+## 🏗️ Arquitetura
 
-<h3>📌 Cadastro de Funcionário</h3>
-<ul>
-  <li>Cadastro completo com dados válidos</li>
-  <li>Validação de campos obrigatórios</li>
-  <li>Cadastro com ID duplicado</li>
-</ul>
+```
+cypress/
+├── e2e/              # specs dos testes
+├── support/
+│   ├── pages/        # Page Objects
+│   └── commands.js   # comandos customizados
+└── fixtures/         # massa de dados
+```
 
-<h3>📌 Login</h3>
-<ul>
-  <li>Login com credenciais válidas</li>
-</ul>
+- **Page Objects:** separam a lógica de interação com a tela da lógica de teste, o que facilita a manutenção.
+- **Comandos customizados:** reaproveitam ações repetidas (ex.: `cy.login()`).
+- **Fixtures:** organizam a massa de dados fora dos testes.
 
-<hr/>
-
-<h2>🧪 Boas Práticas Aplicadas</h2>
-<ul>
-  <li>Testes independentes ✔️</li>
-  <li>Reutilização de elementos com Page Objects ✔️</li>
-  <li>Commands customizados ✔️</li>
-  <li>Screenshots e vídeos automáticos (padrão do Cypress) ✔️</li>
-</ul>
-
-<hr/>
-
-<h2>👩‍💻 Equipe: Squad 04 - Os Incontestáveis</h2>
-
-<h3>
-Alex Duarte da silva <br>
-Ana Vitória Rezende Costa  <br>
-Gabriel Allan Felix de Mesquita Lima  <br>
-Patrick Glauber Oliveira Da Silva  <br>
-</h3>
-
-<h2>Sistema testado: Orange HRM  <br>
-Link: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login</h2>
-
-<div>
-  <strong>Ana Vitória Rezende</strong><br/>
-  Quality Assurance | Estudante de ADS <br/>
-  Apaixonada por qualidade de software e testes ✨
-</div>
-
-<hr/>
+## 🛠️ Tecnologias
 
 <div align="center">
-  <h3>⭐ Se este projeto te ajudou, deixe uma estrela no repositório!</h3>
+
+| Ferramenta | Uso |
+|---|---|
+| **Cypress** | Automação E2E |
+| **JavaScript** | Linguagem dos testes |
+| **Node.js / npm** | Ambiente e dependências |
+| **Git / GitHub** | Versionamento |
+
 </div>
 
+## ▶️ Como executar
 
+**Pré-requisito:** [Node.js](https://nodejs.org/) instalado.
+
+```bash
+# 1. Clonar o repositório
+git clone https://github.com/anavirezende/Projeto_Bootcamp_QA.git
+cd Projeto_Bootcamp_QA
+
+# 2. Instalar as dependências
+npm install
+
+# 3. Rodar os testes
+npx cypress open   # modo interativo
+npx cypress run    # modo headless
+```
+
+## 📚 Aprendizados
+
+- [ex.: aplicação do padrão Page Object na prática]
+- [ex.: organização de massa de dados com fixtures]
+- [ex.: estratégias para deixar os testes estáveis, evitando esperas fixas]
+
+## 🗺️ Próximos passos
+
+- [ ] Pipeline de CI com GitHub Actions
+- [ ] Relatório de testes (Mochawesome)
+- [ ] Testes de API
+
+---
+
+<div align="center">
+
+**Ana Vitória Rezende** · QA Analyst
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-FF6B5B?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anavirezende)
+[![GitHub](https://img.shields.io/badge/GitHub-2b2b2b?style=for-the-badge&logo=github&logoColor=white)](https://github.com/anavirezende)
+
+🌸 *Construindo qualidade um teste de cada vez.*
+
+</div>
