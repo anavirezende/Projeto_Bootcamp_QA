@@ -11,9 +11,9 @@ Page Objects · Comandos customizados · Testes end-to-end
 ![Git](https://img.shields.io/badge/Git-FF6B5B?style=for-the-badge&logo=git&logoColor=white)
 ![Status](https://img.shields.io/badge/status-em%20evolu%C3%A7%C3%A3o-FF6B5B?style=for-the-badge)
 
-<!-- Quando o Passo 2 (GitHub Actions) estiver pronto, descomente a linha abaixo:
+
 [![Testes](https://github.com/anavirezende/Projeto_Bootcamp_QA/actions/workflows/cypress.yml/badge.svg)](https://github.com/anavirezende/Projeto_Bootcamp_QA/actions)
--->
+
 
 <img src="docs/execucao.gif" alt="Execução dos testes no Cypress" width="700">
 
